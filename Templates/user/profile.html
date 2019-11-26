@@ -1,0 +1,812 @@
+{% load staticfiles %}
+
+<html>
+<title>{{user.first_name}} Home</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<div class="header">
+<img src="{% static 'images/csit.jpg' %}" style="height:105px;width:120px;"> <h1 class="serif"><font size="6" color="#333">CS IT DEPARMENT WEBSITE</font> </h1>
+</div>
+</body>
+
+
+
+<style>
+
+
+.header img {
+  float: left;
+  margin-left: 20px;
+
+}
+
+.header h1 {
+  position: relative;
+  top: 4px;
+  left:10px;
+}
+
+body {margin:0;font-family:"Times New Roman", Times, serif;
+}}
+p.solid {border-style: solid;}
+<p> {
+  text-align: left;
+}
+p.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+div.b {
+  text-align: left;
+}
+
+.wrapper {
+	margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 120px;
+  margin-right:70px;
+}
+
+#more {
+  display: button;}
+button{
+  background-color: #ddd;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #555;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+#innerContainer{ font-family: 'Cabin', sans-serif; margin:100px; padding:100px; float:left; width:1000px; height:auto; padding-left:30px; background-color:#ffffff;}
+
+#innerLeftSide{ font-family: 'Cabin', sans-serif; margin:20px; padding:10px; float:left; width:235px; height:auto; }
+
+
+#interLeftSideBox1{margin-bottom:24px; padding-bottom:25px; height:auto; width:auto; background-color:#c2a83d; }
+#interLeftBoxyear { margin-bottom:24px; border:0px; padding:0px; height:41px; width:235; background-color:#cc9933; }
+#interLeftSideBox2{ margin-bottom:24px; padding-bottom:10px; height:auto; width:auto; background-color:#4d9175; }
+#interLeftSideBoxgreen{ margin-bottom:24px; height:auto; width:auto; background-color:#4d9175; }
+#interLeftSideBox3{margin-bottom:24px;  padding-bottom:10px; height:auto; width:auto; background-color:#33808f;}
+#interLeftSideBox4{ margin:0px; padding:0px; height:160px; width:auto; background-color:#e2e2e2;}
+#interLeftSideBox5{ margin-bottom:24px; padding-bottom:10px; height:auto; width:auto; background-color:#b07045; }
+#interLeftSideBoxdarkbrown{ margin-bottom:24px; height:auto; width:auto; background-color:#b07045; }
+#interLeftSideBoxdarkcyan{ margin-bottom:24px; height:auto; width:auto; background-color:#33808f; }
+#interleftsidedotedline { padding-top:10px; margin-top:10px; background-image:url(../images/inner/Doted-line.jpg); background-repeat:repeat-x; }
+#dotedlineshowcase{ padding-top:10px; margin-top:10px; background-image:url(../images/inner/Doted-line-showcase.jpg); background-repeat:repeat-x; }
+#dotedlineshowcasegreen{ padding-top:10px; margin-top:10px; background-image:url(../images/inner/Doted-line-showcase-green.jpg); background-repeat:repeat-x; }
+
+/* Admissions Innerside*/
+#adinterLeftSideBox1{margin-bottom:24px; padding-bottom:10px; height:auto; width:auto; background-color:#cc9933; }
+#adinterLeftSideBoxdarkgolden{margin-bottom:24px; padding-bottom:25px; height:auto; width:auto; background-color:#cc9933; }
+
+
+ @keyframes slider{
+
+0% {
+    left: 0;
+}
+
+20% {
+    left: -100;
+}
+
+40% {
+    left: -100%;
+}
+
+60% {
+    left: -200%
+}
+
+70% {
+    left: -200%;
+}
+
+80% {
+    left: -300%;
+}
+
+70% {
+    left: -300%;
+}
+
+90% {
+    left: -400%;`
+}
+
+100% {
+    left: -400%;
+}
+}
+
+#slider {
+    overflow: hidden;
+    margin-left: 250px;
+    margin-right: 120px;
+}
+
+#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+#slider figure {
+    position: relative;
+    padding-left: 100px;
+    width: 500%;
+    left: 100;
+    font-size: 0;
+    animation: 20s slider infinite;
+
+}
+
+
+#Homenews{
+    background-color:#4c9175;
+    /*background-image:url(../images/img_News1.jpg);*/
+    margin-right:20px;
+    padding:0px;
+    float:left;
+    height: 366px;
+    width:235px;
+    }
+
+
+#Homenewsspace {
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:366px;
+    width:20px;
+    }
+#Homenewsspace {
+    background-image:url(../images/img_News1_blank.jpg);
+    }
+#Homenews2 {
+    background-color:#8c5aa1;
+    margin-right:20px;
+    padding-left:10px;
+    padding:0px;
+    float:left;
+    height: 366px;
+    width:235px;
+    }
+#Homenews2space {
+    background-image: url(../images/img_News2_blank.jpg);
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:366px;
+    width: 235px;
+    }
+#Homenews2Space{
+    background-image:url(../images/img_News2_blank.jpg);
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:366px;
+    width: 21px;
+    }
+/*#Homenews3{background-color:#327f8f; margin-right:20px; padding:0px; float:left; height:366px; width:234px;}*/
+
+#Homenews3{
+    background-color:#327f8f;
+    margin-right:20px;
+    padding:0px;
+    float:left;
+    height:366px;
+    width:234px;
+    }
+
+#Homenews3space {
+    background-image: url(../images/img_News3_blank.jpg);
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:366px;
+    width:20px;
+    }
+
+#Homenews4 {
+    background-color:#cd9933;
+    /*background-image: url(../images/img_News4.jpg);*/
+    margin:0px;
+    padding:0px;
+	float:left;
+	height:366px;
+	width:235px;
+	}
+
+#HomeNewsEvent3 {
+    margin:0px;
+    padding:0px;
+
+    float:left;
+    text-align:center;
+
+    }
+
+.HomeNewsEvent3text{
+    float:left;
+    padding-left:15px;
+    padding-right:10px;
+    padding-top:5px;
+    font-family: 'Cabin', sans-serif; font-size:12px;
+    color:#CCC;
+    }
+
+#HomeNewsEvent3bottom{
+    font-family: 'Cabin', sans-serif;
+    font-size:12px;
+    text-align:justify;
+    color:#7bb5c1;
+    margin:0px;
+    padding:0px;
+    margin-left:15px;
+    margin-top:5px;
+    float:left;
+    height:auto;
+    width:200px;
+    }
+
+#HomeNews2bottom {
+    font-family: 'Cabin', sans-serif;
+    font-size:12px;
+    color:#CCC;
+    margin:0px;
+    padding:0px;
+    height:auto;
+    width:auto;
+    }
+
+
+
+.HomeNewsMore{
+    font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    text-align:justify;
+    color:#FFF;
+    margin:0px;
+    padding:0px;
+    height:auto;
+    width:auto;
+    }
+
+.HomeNewsMore a:link {
+    font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    text-align:justify;
+    color:#FFF;
+    margin:0px;
+    padding:0px;
+    height:auto;
+    width:auto;
+    }
+
+.HomeNewsMore a:active {
+    font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    text-align:justify;
+    color:#FFF;
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:auto;
+    width:auto;
+    }
+.HomeNewsMore a:visited {
+    font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    text-align:justify;
+    color:#FFF;
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:auto;
+    width:auto;
+    }
+
+.HomeNewsMore a:hover {
+    font-family: 'Cabin', sans-serif;
+    font-size:14px;
+    text-align:justify;
+    color:#4356d1;
+    margin:0px;
+    padding:0px;
+    float:left;
+    height:auto;
+    width:auto;
+    }
+
+#footertotal{float:left; width:1000px; height:auto; margin:0px; background-color:#FFFFFF;}
+#HomeFooterrepeat{/*background-image:url(../images/img_Footer_repeat.jpg); background-repeat:repeat-x;*/ margin:0px; padding:0px; float:left; height:30px; width:1000px;}
+
+/*#HomeFootersocail{ /*background-image:url(../images/img_Footer_repeat.jpg); background-repeat:repeat;*/ /*background-image:url(../images/img_Footer-Socail.jpg);*/ /*margin:0px; padding:0px; float:left; height:120px; width:1000px;}*/
+
+#HomeFootersocail{ margin:0px; padding-left:200px; float:left; height:120px; width:1000px;  }
+
+#HomeFooter1{font-family: 'Cabin', sans-serif; margin:0px; width:1000px; text-align:center; padding-bottom:20px;
+padding-top:17px;}
+#HomeFooter2 { font-family: 'Cabin', sans-serif; text-transform:lowercase; font-size:18px; margin:0px;
+width:1000px; text-align:center; padding-bottom:5px;padding-left:170px; }
+.HomenewsHeading1{font-family: 'Cabin', sans-serif; font-size:18px; line-height:40px; font-weight:bold; margin:0px;
+padding-top:5px; height:40px; width:auto; color:#FFF; }
+
+ul {
+    position:relative;
+    margin:0;
+    padding:0;
+    display:flex;
+}
+
+ul li {
+    position:relative;
+    width:30px;
+    height:30px;
+    list-style:none;
+    margin:0 30px;
+    transform: rotate(-30deg) skew(25deg);
+    background:#ccc;
+    }
+
+ul li span{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    transition: 0.5s;
+    display: flex !important;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:30px !important;
+    }
+
+ul li:hover span:nth-child(5)
+{
+    transform: translate(40px, -40px);
+    opacity:1;
+}
+
+ul li:hover span:nth-child(4)
+{
+    transform: translate(30px, -30px);
+    opacity:.8;
+}
+
+ul li:hover span:nth-child(3)
+{
+    transform: translate(20px, -20px);
+    opacity:.6;
+}
+
+ul li:hover span:nth-child(2)
+{
+    transform: translate(10px, -10px);
+    opacity:.4;
+}
+
+ul li:hover span:nth-child(1)
+{
+    transform: translate(0,0);
+    opacity:.2;
+}
+
+ul li:nth-child(5) span{
+    background:#e4405f
+}
+
+ul li:nth-child(4) span{
+    background:#0077B5
+}
+
+ul li:nth-child(3) span{
+    background:#dd4b39
+}
+
+ul li:nth-child(2) span{
+    background:#55acee
+}
+
+ul li:nth-child(1) span{
+    background:#3b5999
+}
+
+</style>
+<body bgcolor="f5f5f5">
+  <p class="solid">
+
+<div class="topnav" id="myTopnav">
+  <a href="{% url 'profile'%}" >Home</a>
+
+<div class="dropdown">
+    <button class="dropbtn" href="#Notices">Notices
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{% url 'library_all_notice' %}">All</a>
+        <a href="{% url 'all_bsc_notice' %}">B.Sc</a>
+        <a href="{% url 'all_msc_notice' %}">M.Sc</a>
+    </div>
+</div>
+      <div class="dropdown">
+          <button class="dropbtn" href="#Library">Library
+          <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="{% url 'library_books' %}">Books</a>
+              <a href="{% url 'library_exampaper'%}">Exam Papers</a>
+              <a href="{% url 'library_syllabus' %}">Syllabus</a>
+              <a href="{% url 'library_timetable'%}">Time Tables</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+          <button class="dropbtn" href="#About">About
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="{% url 'library_department' %}">Department</a>
+              <a href="{% url 'library_faculty' %}">Faculty</a>
+              <a href="{% url 'library_alumni' %}">Alumni</a>
+	      <a href="{% url 'library_admission' %}">Admissions</a>
+          </div>
+      </div>
+  <a href="{% url 'library_gallery' %}">Gallery</a>
+          <a href="{% url 'posts' %}">Posts</a>
+
+
+      <div class="dropdown" style="float:right;">
+          <button class="dropbtn" href="#About" >{{user.first_name}}
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+              <a href="{% url 'viewprofile' %}">Profile</a>
+              <a href="{% url 'todo' %}">To Do List</a>
+              <a href="{% url 'logout' %}">Logout</a>
+          </div>
+      </div>
+      <input type="text" placeholder="Search..">
+
+</div>
+
+<div id="innerLeftSide">
+  <div id="interLeftSideBox1" style="padding-top:10px;" align="center">
+
+      <div class="headder18"><b>CS DEPARTMENT</b></div>
+    <div style="padding:10px; "><img src="{% static 'images/csdep.jpg' %}" style="height:200px;width:170px;" ></div>
+    <div class="textarea12project" style="padding:10px;">The Department of Computer Science & Information Technology was established in the year 1999. Ruia College was among the first 8 colleges to start B.Sc. CS....</div>
+    <div ><a href="{% url 'library_department' %}" >More &gt; </a></div>
+
+  </div>
+  <!--<div id="adinterLeftSideBox1"><div class="headder18"><a href="#">YEARBOOK 2012 ></a></div> </div>-->
+  <div id="adinterLeftSideBoxdarkgolden" style="padding-top:5px;" align="center">
+      <p><B>NOTICES</B></p><hr>
+      <marquee id="marquee1" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" style="padding:15px;height: 190px; width: 100%; vertical-align: top; display: inline-block;" align="top">
+          <p><li><img src="{% static 'images/new.gif'%}" style="width:30px;text-decoration:none;" align="left"><a href="media/Notices/ScholarshipFreeship.png" style="text-decoration:none;">Scholarship & Freeship</a></li></p>
+          <p><li><img src="{% static 'images/new.gif'%}" style="width:30px;text-decoration:none;" align="left"><a href="media/Notices/FINAL_MKMP_BROCHURE.pdf" style="text-decoration:none;">MKMP Conference</a></li></p>
+          <p><li><img src="{% static 'images/new.gif'%}" style="width:30px;text-decoration:none;" align="left"><a href="media/Notices/TechStorm.png" style="text-decoration:none;">TechStorm Festival</a></li></p>
+          <li><a href="media/Notices/IndianStatisticalInstitue.png" style="text-decoration:none;"> Indian Statistical Institute Admission Notice</a> </li>
+      </marquee>
+
+
+  </div>
+
+  <div id="interLeftSideBox2" style="padding-top:10px;" align="center">
+
+    <div align="center">
+
+        <p style="font-size:18px;"><a href="{% static 'images/calendar.jpg' %}" style="text-decoration:none;"><b>- HOLIDAYS 2019 CALENDAR</b></a></p>
+        <p style="font-size:18px;"><a href="https://www.onfees.com/" style="text-decoration:none;"><b>- PAY FEES ONLINE</b></a></p>
+
+
+    </div>
+
+
+  </div>
+  <!--<div id="interLeftSideBox3"><div class="headder18">WHITE PAPERS</div>
+<div id="interleftsidedotedline" > </div>
+<div class="textarea12"> sdkl;asdfkja djasdjf jasdjfkjakl;sd fjkjasdjaskl;dfj j askldfhas dasdfjlhsadhhasjkdfhjkas sdafjkdffdfdd <br /> </div>
+<div id="interleftsidedotedline" > </div>
+<div class="textarea12"> sdkl;asdfkja djasdjf jasdjfkjakl;sd fjkjasdjaskl;dfj j askldfhas dasdfjlhsadhhasjkdfhjkas sdafjkdffdfdd </div>
+<div id="interleftsidedotedline" > </div>
+<div class="textarea12"> sdkl;asdfkja djasdjf jasdjfkjakl;sd fjkjasdjaskl;dfj j askldfhas dasdfjlhsadhhasjkdfhjkas sdafjkdffdfdd <br /> </div>
+<div id="interleftsidedotedline" > </div>
+</div>-->
+</div>
+
+
+
+<div id="slider">
+    <figure>
+        <img src="{% static 'images/college2.jpg' %}"alt="building" style="width:950px;height:300px;"/>
+<img src="{% static 'images/college1.jpg' %}" alt="building" style="width:950px;height:300px;"/>
+                <img src="{% static 'images/college3.jpg' %}"alt="building" style="width:950px;height:300px;"/>
+                <img src="{% static 'images/college4.jpg' %}"alt="building" style="width:1000px;height:300px;"/>
+        <img src="{% static 'images/college5.jpg' %}"alt="building" style="width:1000px;height:300px;"/>
+
+        </figure>
+</div>
+
+<div class="wrapper">
+
+<div id="Homenews">
+    <div class="HomenewsHeading1" align="center">TECHSTORM '18</div>
+   <div id="HomeNewsEvent3">
+       <a href="media/Notices/TechStorm.png" style="text-decoration:none;">
+       <img src="{% static 'images/TechStorm.png' %}" style="height:200px;width:150px;"><br>
+       <div class="HomeNews2bottom" style="font-size:15px;"><b>Department Festival</b> TECHSTORM 2018</div></a>
+     <div class="HomeNewsMore" style="margin-left:20px;">
+       <h3 ><a href="{% url 'library_all_notice'%}" style="text-decoration:none;">MORE ..</a></h3></div>
+   </div>
+  </div>
+
+  <!--<div id="Homenewsspace"></div>-->
+  <div id="Homenews2">
+    <div class="HomenewsHeading1" align="center">ADMISSIONS</div>
+      <img src="{% static 'images/admission.jpg' %}" style="height:200px;width:200px;"><br>
+       <div id="HomeNews2bottom" style="font-size:15px;padding-left:15px;"><b>Computer Science & Information Technology Admission 2018</b> </div>
+    <!--<div id="dotline"></div>-->
+    <div class="HomeNewsMore">
+    <h3 style="padding-left:13px;"><strong><a href="{% url 'library_admission' %}"style="text-decoration:none;" >MORE ..</a></strong></h3></div>
+  </div>
+<!--    <div id="HomeNewsEvent3"><a href="http://alumni.mitid.edu.in" target="_blank"><img src="images/alumni-Logo-Index.jpg" alt="MITID Alumni website" title="MITID Alumni website" border="0" /></a><a href="http://www.edugild.com/index.htm" target="_blank"></a> </div>
+    <div class="HomeNewsEvent3text">Official MITID Alumni website launched</div>
+    <div class="HomeNewsMore">
+    <h3 style="padding-left:13px;"><a href="http://www.edugild.com/index.htm" target="_blank">MORE ..</a></h3></div>
+  </div>-->
+<!--  <div id="Homenews2Space"></div>-->
+  <div id="Homenews3">
+      <div class="HomenewsHeading1" ALIGN="center">INFRASTRUCTURE</div>
+
+      <div id="HomeNewsEvent3" style="margin-left:15px;"> <img src="{% static 'images/gallery.jpg' %}" style="height:230px;width:200px;"></div><br>
+      <div id="HomeNewsEvent3bottom" style="font-size:15px;" align="center"><b>Our Gallery </b></div>
+      <div class="HomeNewsMore" style="text-decoration:none;margin-left:20px;"><strong><a href="{% url 'library_gallery' %}" style="text-decoration:none;">MORE ..</a></strong> </div>
+  </div>
+<!--  <div id="Homenews3space"></div>-->
+<div id="Homenews4">
+    <div class="HomenewsHeading1" align="center">BOOKS IN LIBRARY</div>
+ <!--   <div id="HomeNewsEvent3"> </div>-->
+    <div id="HomeNewsEvent3"> <a href="media/Ebooks/Cryptography_and_Network_Security_Principles_and_Practice.pdf"> <img src="{% static 'images/books.jpg' %}" style="margin-left:20px;height:230px;width:200px;"> </a>
+        <div id="HomeNewsEvent3bottom" style="font-size:15px;" align="center"><b>More books available </b></div>
+</div>
+<div class="HomeNewsMore" style="text-decoration:none;margin-left:20px;"> <strong> <a href="{% url 'library_books'%}" style="text-decoration:none;">  MORE .. </a> </strong></div>
+<div id="dotline1"></div><br>
+</div>
+
+<div id="HomeFooterrepeat" style="padding-top:30px;"></div> <div id="HomeFootersocail">
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-facebook" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-twitter" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-google-plus" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-linkedin" aria-hidden="true"></span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="fa fa-instagram" aria-hidden="true"></span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+ <div id="HomeFooter2"><br><a href="{% url 'contact' %}">Contact</a> | <a href="#">Careers</a> | <a href="#">Disclaimer</a> | <a href="#">Copyright</a> | <a href="https://www.google.com/maps/place/Ramnarain+Ruia+Autonomous+College/@19.023554,72.8478681,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7cf20f46ff7c1:0xd7607e1d400909ec!8m2!3d19.023554!4d72.8500568">Location</a> </div>
+ </div>
+
+
+
+
+
+</body>
+</html>

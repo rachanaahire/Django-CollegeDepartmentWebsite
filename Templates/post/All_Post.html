@@ -1,0 +1,108 @@
+{% load staticfiles %}
+
+<html>
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>All Faculty Posts</title>
+
+  <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{% static 'css/blog-post.css' %}" >
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a href="{% url 'profile'%}"> <img src="{% static 'images/csit.jpg' %}" style="width:75px;height:65px;"></a> &nbsp;&nbsp;&nbsp;
+      <a class="navbar-brand" href="#">CS IT FORUM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'profile'%}">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'studentposts' %}">Student Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'posts' %}">Faculty Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">{{user.first_name}}(Logout)</a>
+
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div>
+
+{% for post in obj %}
+
+    <div class="container" align="center">
+        <table class="table table-hover table-bordered" cellpadding="20px">
+            <tbody>
+        <tr>
+            <td> Posted By: </td><td>{{post.user}}</td><br>
+        </tr></tbody>
+            <tbody>
+            <tr>
+            <td> Posted on: </td><td>{{post.timestamp}}</td><br>
+        </tr></tbody>
+            <tbody>
+        <tr>
+            <td> Title: </td><td><a href="/{{post.id}}/">{{post.title}}</a></td><br>
+        </tr></tbody>
+        <tbody>
+        <tr>
+            <td> POST: </td><td><p>{{post.content|linebreaks}}</p></td>
+    </tr></tbody>
+        <tbody>
+            <tr>
+            <td> Link: </td><td><a href="{{post.link}}">{{post.link}}</a></td><br>
+        </tr></tbody>
+            <tbody>
+            <tr>
+                <td> <a href="/{{post.id}}/"><button type="button" class="btn btn-primary">View And Comment</button></a> </td><br>
+        </tr></tbody>
+
+            </table>
+
+</div>
+
+    {% endfor %}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

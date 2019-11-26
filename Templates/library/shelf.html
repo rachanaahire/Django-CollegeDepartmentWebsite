@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHELF</title>
+</head>
+<body>
+{% for book_name in obj %}
+{{book_name.ref_code}}
+{{book_name.items.url}}
+</body>
+</html>

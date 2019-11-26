@@ -1,0 +1,338 @@
+{% load staticfiles %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<div class="header">
+<img src="{% static 'images/csit.jpg' %}" style="height:105px;width:120px;"> <h1 class="serif"><font size="6" color="#333">CS IT DEPARMENT WEBSITE</font> </h1>
+</div>
+</body>
+<style>
+
+.header img {
+  float: left;
+  margin-left: 20px;
+
+}
+
+.header h1 {
+  position: relative;
+  top: 4px;
+  left:10px;
+}
+
+
+
+body {margin:0;font-family:"Times New Roman", Times, serif;
+}}
+p.solid {border-style: solid;}
+<p> {
+  text-align: left;
+}
+p.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+div.b {
+  text-align: left;
+}
+
+.wrapper {
+	margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 30px;
+  margin-right:30px;
+}
+
+#more {
+  display: button;}
+button{
+  background-color: #ddd;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdownn {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdownn .dropbtnn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdownn-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdownn-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdownn:hover .dropbtnn {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.dropdownn-content a:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+.dropdownn:hover .dropdownn-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdownn {float: none;}
+  .topnav.responsive .dropdownn-content {position: relative;}
+  .topnav.responsive .dropdownn .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #555;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+
+
+
+
+</style>
+
+<div class="topnav" id="myTopnav">
+  <a href="{% url 'index' %}" >Home</a>
+    <a href="{% url 'all_notice'%}">Notices</a>
+
+    <div class="dropdownn">
+        <button class="dropbtnn" href="#Library">Library
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdownn-content">
+            <a href="{% url 'books' %}">Books</a>
+              <a href="{% url 'exampapers' %}">Exam Papers</a>
+              <a href="{% url 'syllabus' %}">Syllabus</a>
+        </div>
+    </div>
+
+    <div class="dropdownn">
+        <button class="dropbtnn" href="#About">About
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdownn-content">
+            <a href="{% url 'department'%}">Department</a>
+            <a href="{% url 'faculty'%}">Faculty</a>
+            <a href="{% url 'alumni'%}">Alumni</a>
+            <a href="{% url 'admission'%}">Admissions</a>
+        </div>
+    </div>
+    <a href="{% url 'gallery'%}">Gallery</a>
+    <a href="{% url 'contact'%}">Contact</a>
+    <a href="{% url 'login'%}">Login</a>
+
+    <input type="text" placeholder="Search..">
+</div>
+
+<style>
+@import "bourbon" !important;
+
+
+
+.wrapper {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.form-signin {
+  max-width: 450px;
+  padding: 40px 45px 45px;
+  margin: 0 auto;
+  background-color: #2DBDBD;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.img {
+	padding: 10px;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+}
+
+</style>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+<form class="wrapper">
+    <div class="form-signin">
+        <img src="{% static 'images/user1.jpg'%}" align="right" style="width:100px;height:100px; padding:10px;">
+        <h2 class="form-signin-heading">Please login</h2><br><br><br>
+        <input type="text" class="form-control" name="username" placeholder="User Name" required="" autofocus="" /> <br><br>
+        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+        <br><p><font color="red"> {{error}} </font> </p><br>
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+        </label><br><br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button><br>
+        <a href="#">Forgot Password?</a> <a href="#" style="float:right;">Forgot Username?</a>
+    </div>
+</form>
+</form>
+</html>
